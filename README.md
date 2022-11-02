@@ -23,6 +23,8 @@ configurations:
 3. `elimo_playtus_linux60_defconfig`, which is identical to `elimo_playtus_defconfig`,
    but based on the Linux kernel v6.0
 
+4. `elimo_beechat_defconfig`, support for the custom carrier board for the [Beechat](https://beechat.network/) portable mesh hotspot
+
 
 ## Getting started
 
