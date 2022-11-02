@@ -1,0 +1,7 @@
+#!/bin/sh
+amixer cset name='DAC Playback Switch' on
+amixer cset name='DAC Playback Volume' 63
+amixer cset name='Line Out Playback Switch' on
+amixer cset name='Line Out Playback Volume' 31
+
+SDL_NOMOUSE=1 /usr/games/prboom

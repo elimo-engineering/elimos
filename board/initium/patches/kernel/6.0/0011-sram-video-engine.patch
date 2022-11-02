@@ -1,0 +1,13 @@
+diff --color -ruN output/build/linux-5.11/Documentation/devicetree/bindings/sram/allwinner,sun4i-a10-system-control.yaml linux-5.11/Documentation/devicetree/bindings/sram/allwinner,sun4i-a10-system-control.yaml
+--- output/build/linux-5.11/Documentation/devicetree/bindings/sram/allwinner,sun4i-a10-system-control.yaml	2021-02-14 22:32:24.000000000 +0000
++++ linux-5.11/Documentation/devicetree/bindings/sram/allwinner,sun4i-a10-system-control.yaml	2022-09-13 17:56:54.066136127 +0100
+@@ -87,6 +87,9 @@
+                   - const: allwinner,sun7i-a20-sram-c1
+                   - const: allwinner,sun4i-a10-sram-c1
+               - items:
++                  - const: allwinner,sun8i-v3s-sram-c1
++                  - const: allwinner,sun4i-a10-sram-c1
++              - items:
+                   - const: allwinner,sun8i-a23-sram-c1
+                   - const: allwinner,sun4i-a10-sram-c1
+               - items:

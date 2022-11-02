@@ -1,0 +1,17 @@
+--- output/build/linux-5.11/arch/arm/boot/dts/sun8i-s3-elimo-initium.dts	2022-09-23 09:33:20.834639137 +0100
++++ linux-5.11/arch/arm/boot/dts/sun8i-s3-elimo-initium.dts	2022-09-23 09:34:21.322353940 +0100
+@@ -106,3 +106,14 @@
+     phy-names = "usb";
+     status = "okay";
+ };
++
++&codec {
++    allwinner,audio-routing =
++        "Speaker", "LINEOUT",
++        "LINEIN", "Line In";
++    status = "okay";
++};
++
++&codec_analog {
++	status = "okay";
++};

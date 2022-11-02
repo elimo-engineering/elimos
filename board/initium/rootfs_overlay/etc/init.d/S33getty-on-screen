@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        getty -L /dev/tty0 115200 vt100 &
+        ;;
+esac
+
+exit $?

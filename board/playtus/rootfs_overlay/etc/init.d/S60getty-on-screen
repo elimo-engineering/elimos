@@ -1,0 +1,14 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        psplash-write "QUIT"
+        # blank the framebuffer (each pixel is 4 bytes, so the screen is 800*4*480 bytes)
+        dd bs=3200 count=480 if=/dev/zero of=/dev/fb0
+        getty -L /dev/tty0 115200 vt100 &
+        sleep 1 # avoids getty cleaning the fb right after fbv drew the logo
+        fbv -cs1 /elimo_logo*
+        ;;
+esac
+
+exit $?

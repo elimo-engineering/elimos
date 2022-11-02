@@ -1,0 +1,11 @@
+#!/bin/sh
+
+case "$1" in
+    start)
+        psplash -n &
+        psplash-write "MSG Booting Playtus"
+        psplash-write "PROGRESS 50"
+        ;;
+esac
+
+exit $?

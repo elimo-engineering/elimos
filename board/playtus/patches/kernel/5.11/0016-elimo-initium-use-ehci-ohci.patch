@@ -1,0 +1,18 @@
+--- output/build/linux-5.11/arch/arm/boot/dts/sun8i-s3-elimo-initium.dts	2022-09-20 20:18:29.602664248 +0100
++++ linux-5.11/arch/arm/boot/dts/sun8i-s3-elimo-initium.dts	2022-09-20 20:10:51.586758587 +0100
+@@ -94,3 +94,15 @@
+ 		remote-endpoint = <&panel_input>;
+ 	};
+ };
++
++&ehci0 {
++    phys = <&usbphy 0>;
++    phy-names = "usb";
++    status = "okay";
++};
++
++&ohci0 {
++    phys = <&usbphy 0>;
++    phy-names = "usb";
++    status = "okay";
++};
