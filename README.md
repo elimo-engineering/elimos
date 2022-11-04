@@ -3,11 +3,11 @@
 This repository is a Buildroot `BR2_EXTERNAL` tree dedicated to
 supporting the [Elimo Engineering](https://elimo.io)
 [Impetus SoM and Initium EVK](https://elimo.io/portfolio/impetus/)
-platforms. 
+platforms.
 
 ## Available configurations
 
-This `BR2_EXTERNAL` tree provides 4 example Buildroot
+This `BR2_EXTERNAL` tree provides 3 example Buildroot
 configurations:
 
 1. `elimo_initium_defconfig`, which is a minimal configuration to
@@ -17,13 +17,10 @@ configurations:
 
 2. `elimo_playtus_defconfig`, which is a configuration to build the Initium demo as
    shown in our stands at [various industry events](https://www.electromaker.io/blog/article/hardware-pioneers-2022-elimos-impetus-is-a-highly-connected-module)
-   It builds the U-Boot bootloader, Linux kernel, and a richer user-space 
+   It builds the U-Boot bootloader, Linux kernel, and a richer user-space
    that includes OpenTyrian and prboom (a Doom emulator).
 
-3. `elimo_playtus_linux60_defconfig`, which is identical to `elimo_playtus_defconfig`,
-   but based on the Linux kernel v6.0
-
-4. `elimo_beechat_defconfig`, support for the custom carrier board for the [Beechat](https://beechat.network/) portable mesh hotspot
+3. `elimo_beechat_defconfig`, support for the custom carrier board for the [Beechat](https://beechat.network/) portable mesh hotspot
 
 
 ## Getting started
@@ -43,7 +40,7 @@ For Debian/Ubuntu distributions, the following command allows to
 install the necessary packages:
 
 ```bash
-$ sudo apt install debianutils sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc git gcc-multilib g++-multilib
+$ sudo apt install debianutils sed make binutils build-essential gcc g++ bash patch gzip bzip2 perl tar cpio unzip rsync file bc git gcc-multilib g++-multilib python3-dev libssl-dev
 ```
 
 There are also optional dependencies if you want to use Buildroot features
@@ -69,7 +66,7 @@ $ git clone --recurse-submodules https://github.com/elimo-engineering/elimos.git
 
 ### Configure and build
 
-From the root of the repo, configure the system you want to build by using one of the 4
+From the root of the repo, configure the system you want to build by using one of the 3
 *defconfigs* provided in this `BR2_EXTERNAL` tree. For example:
 
 ```bash
@@ -123,7 +120,7 @@ Then (assuming you are using the Initium, custom carrier boards will vary):
 5. Switch the `POWER SW` switch to `ON`.
 
 6. The system will start, with the console on UART. You can log-in as
-`root` with no password. If you have an LCD, you can plug in a keyboad on a 
+`root` with no password. If you have an LCD, you can plug in a keyboad on a
 USB-A connector and log in on the LCD
 
 # Going further
