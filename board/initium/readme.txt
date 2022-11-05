@@ -2,7 +2,7 @@ Intro
 =====
 
 This directory contains a buildroot configuration for building an image for 
-the Elimo Impetus SoM.
+the Elimo Initium EVK, with LCD and support for demo games (Doom, OpenTyrian)
 
 How to build it
 ===============
@@ -10,7 +10,7 @@ How to build it
 Configure Buildroot
 -------------------
 
-  $ make elimo_impetus_defconfig
+  $ make -C buildroot elimo_playtus_defconfig
 
 Build the rootfs
 ----------------
@@ -20,7 +20,7 @@ download the packages' sources.
 
 You may now build your rootfs with:
 
-  $ make
+  $ make -C buildroot
 
 (This may take a while, consider getting yourself a coffee ;-) )
 
@@ -29,7 +29,7 @@ Result of the build
 
 After building, you should obtain this tree:
 
-    output/images/
+    buildroot/output/images/
     +-- boot.scr
     +-- boot.vfat
     +-- rootfs.ext2
@@ -46,11 +46,11 @@ How to write the SD card
 ========================
 
 Once the build process is finished you will have an image called
-"sdcard.img" in the output/images/ directory.
+"sdcard.img" in the buildroot/output/images/ directory.
 
 Copy the bootable "sdcard.img" onto an SD card with "dd":
 
-  $ sudo dd if=output/images/sdcard.img of=/dev/sdX
+  $ sudo dd if=buildroot/output/images/sdcard.img of=/dev/sdX
 
 Alternatively, you can use the Etcher graphical tool to burn the image
 to the SD card safely and on any platform:
