@@ -1,8 +1,10 @@
 Intro
 =====
 
-This directory contains a buildroot configuration for building an image for 
-the Elimo Initium EVK, with LCD and support for demo games (Doom, OpenTyrian)
+This directory contains a buildroot configuration and data for building an image for
+the Elimo Initium EVK with LCD and gamepad support, plus a couple of games (Doom and Tyrian)
+The base/ sibling of this directory is used as a starting point, and the defconfig points
+to Playtus-specific files in this directory.
 
 How to build it
 ===============
@@ -15,7 +17,7 @@ Configure Buildroot
 Build the rootfs
 ----------------
 
-Note: you will need to have access to the network, since Buildroot will 
+Note: you will need to have access to the network, since Buildroot will
 download the packages' sources.
 
 You may now build your rootfs with:
@@ -32,12 +34,12 @@ After building, you should obtain this tree:
     buildroot/output/images/
     +-- boot.scr
     +-- boot.vfat
+    +-- brcm/
     +-- rootfs.ext2
     +-- rootfs.ext4 -> rootfs.ext2
     +-- rootfs.tar
     +-- sdcard.img
-    +-- sun8i-v3s-licheepi-zero-dock.dtb
-    +-- sun8i-v3s-licheepi-zero.dtb
+    +-- sun8i-s3-elimo-initium.dtb
     +-- u-boot.bin
     +-- u-boot-sunxi-with-spl.bin
     `-- zImage

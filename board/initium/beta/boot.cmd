@@ -1,4 +1,4 @@
-setenv bootargs console=ttyS0,115200 panic=5 console=tty0 rootwait root=/dev/mmcblk0p2 earlyprintk rw
+setenv bootargs console=ttyS1,115200 panic=5 console=tty0 rootwait root=/dev/mmcblk0p2 earlyprintk rw
 
 # Example kernel cmdline to enable:
 # - brcmfmac debugging
